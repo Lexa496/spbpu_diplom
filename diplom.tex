@@ -1,0 +1,171 @@
+\documentclass[a4paper,14pt]{extreport} % Класс документа (report для дипломов)
+\usepackage[utf8]{inputenc} % Кодировка
+\usepackage[T2A]{fontenc} % Кириллическая кодировка
+\usepackage[russian]{babel} % Язык документа
+\usepackage{amsmath,amsfonts,amssymb} % Математические пакеты
+\usepackage{graphicx} % Для вставки графики
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref} % Гиперссылки
+\usepackage{geometry} % Настройка полей
+\geometry{left=3cm, right=1.5cm, top=2cm, bottom=2cm} % Поля страницы
+
+% Настройка стилей заголовков
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+
+\begin{document}
+
+% Титульный лист
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \large
+        Министерство науки и высшего образования Российской Федерации \\
+        Название университета \\
+        Факультет такой-то \\
+        Кафедра такая-то \\
+        
+        \vspace{2cm}
+        
+        \LARGE
+        \textbf{Исследование влияния ионосферы на пропускную способность канала связи при двусторонней передачи информации} \\
+        \large
+        (Дипломная работа) \\
+        
+        \vspace{2cm}
+        
+        \begin{minipage}{0.4\textwidth}
+            \begin{flushleft}
+                \large
+                \textbf{Выполнил:} \\
+                Студент группы ХХ-ХХ \\
+                Иванов И.И. \\
+            \end{flushleft}
+        \end{minipage}
+        ~
+        \begin{minipage}{0.4\textwidth}
+            \begin{flushright}
+                \large
+                \textbf{Научный руководитель:} \\
+                к.т.н., доцент \\
+                Петров П.П. \\
+            \end{flushright}
+        \end{minipage}
+        
+        \vfill
+        
+        \large
+        Город – 2023
+    \end{center}
+\end{titlepage}
+
+% Оглавление
+\tableofcontents
+
+% Введение
+\chapter*{Введение}
+\addcontentsline{toc}{chapter}{Введение}
+Рассмотрим распространение тестового сигнала [что нибудь из радиотехники] - гармонической плоской волны в ионосфере. Введем декартову систему координат . Ось  направим “вверх” по радиусу земли . 
+
+% Основные главы
+\chapter{Обзор литературы и постановка задачи}
+\section{Анализ современного состояния проблемы}
+Обзор существующих исследований по теме, анализ литературы.
+
+\section {Цель}
+Предполагается исследовать коэффициент отражения и прохождения при наклонном падении гармонической плоской волны как при распространении от земли к спутнику, так и в обратном направлении.
+\section{Постановка задачи}
+Среду распространения электромагнитной волны считаем плоскослоистой, линейной, изотропной (безынерционной), стационарной, безграничной. Свободные заряды отсутствуют. 
+Будем пренебрегать сферичностью поверхности земли, то есть считаем ее локально плоскослоистой. 
+Точку O выберем, где-нибудь в ионосфере. 
+Пусть гармоническая плоская волна горизонтальной или вертикальной поляризации падает снизу вверх под углом , - волновой вектор. 
+Систему координат выберем так, что волна падает в плоскости.
+
+Распространение электромагнитной волны описывается уравнениями Максвелла [Тамм, Сивухин].
+
+\chapter{Теоретическая часть}
+\section{Основные понятия и определения}
+Теоретические основы, необходимые для понимания работы.
+
+$$
+\nabla \times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t}
+$$
+
+$$
+\nabla \times \mathbf{H} = \mathbf{j} +\frac{\partial \mathbf{D}}{\partial t}
+$$
+
+$$
+\operatorname{div} \mathbf{D} = \rho
+$$
+
+$$
+\operatorname{div} \mathbf{B} = 0
+$$
+
+$$
+U''_{zz} - q\frac{\varepsilon'(z)}{\varepsilon} + U'_{z}+k^2\varepsilon_{nach}(\tilde{\varepsilon}-sin^2\Theta_0)U=0
+$$
+
+$$
+U''_{ss} - q\frac{\varepsilon'(s)}{\varepsilon} + U'_{s}+\eta_0^2(\tilde{\varepsilon}-sin^2\Theta_0)U=0
+$$
+
+$$
+\eta_0:=k\sqrt{\varepsilon}l=\frac{w}{c}{\varepsilon}l
+$$
+
+
+\section{Методы исследования}
+Описание используемых методов и подходов.
+
+\chapter{Практическая часть}
+\section{Разработка модели/алгоритма/системы}
+Описание разработанного решения.
+
+\section{Эксперименты и результаты}
+Представление результатов, таблицы, графики.
+
+\begin{table}[h]
+\centering
+\caption{Пример таблицы с результатами}
+\begin{tabular}{|l|c|r|}
+\hline
+Параметр & Значение 1 & Значение 2 \\
+\hline
+Характеристика А & 10 & 15 \\
+Характеристика Б & 20 & 25 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \caption{Пример рисунка}
+    \label{fig:example}
+\end{figure}
+
+
+% Заключение
+\chapter*{Заключение}
+\addcontentsline{toc}{chapter}{Заключение}
+Краткое изложение основных результатов, выводы и перспективы дальнейших исследований.
+
+% Список литературы
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Список литературы}
+\bibitem{book1} Автор. Название книги. -- Город: Издательство, год. -- 255 с.
+\bibitem{article1} Автор. Название статьи // Журнал. -- год. -- № X. -- С. XX-YY.
+\end{thebibliography}
+
+% Приложения
+\appendix
+\chapter{Первое приложение}
+Текст приложения.
+
+\chapter{Второе приложение}
+Дополнительные материалы.
+
+\end{document}
